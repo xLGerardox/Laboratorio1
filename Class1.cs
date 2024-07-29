@@ -36,7 +36,25 @@ namespace Laboratorio1
             productos.Add(new Producto(nombre, precio));
         }
 
-        
+        public float CalcularTotal()
+        {
+            float total = 0;
+            foreach (var producto in productos)
+            {
+                total += producto.Precio;
+            }
+            return total;
+        }
+
+        public float AplicarDescuento(float total)
+        {
+            if (total > umbralDescuento)
+            {
+                return total * (1 - porcentajeDescuento);
+            }
+            return total;
+        }
+
 
 
 
