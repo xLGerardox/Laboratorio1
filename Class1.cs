@@ -8,12 +8,12 @@ namespace Laboratorio1
 {
     internal class Class1
     {
-        public class Cllientes
+        public class Class1
         {
             public string Nombre { get; set; }
             public int Precio { get; set; }
 
-            public Cllientes(int precio, string nombre)
+            public Class1(int precio, string nombre)
             {
                 Nombre = nombre;
                 Precio = precio;

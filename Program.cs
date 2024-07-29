@@ -1,4 +1,8 @@
-﻿static void Main(string[] args)
+﻿using Laboratorio1;
+using static Laboratorio1.Class1;
+
+Class1 producto = Class1.Producto;
+
 {
     while (true)
     {
@@ -41,3 +45,12 @@ static void MostrarMenu()
     Console.WriteLine("3. Salir");
     Console.Write("Selecciona una opción: ");
 }
+
+
+static void NombreProducto()
+{
+    Console.WriteLine("Ingrese el nombre del producto");
+    Console.WriteLine("Ingrese el precio del producto");
+}
+
+
