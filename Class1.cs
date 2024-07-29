@@ -21,6 +21,14 @@ namespace Laboratorio1
     class CarritoDeCompras
     {
         private List<Producto> productos;
-        private
+        privatefloat umbralDescuento;
+        private float porcentajeDescuento;
+
+        public CarritoDeCompras(float umbral, float porcentaje)
+        {
+            productos = new List<Producto>();
+            umbralDescuento = umbral;
+            porcentajeDescuento = porcentaje;
+        }
     }
 }
