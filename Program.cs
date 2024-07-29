@@ -30,3 +30,15 @@ class Program
             }
         }
 
+
+        float totalCompra = CalcularTotal(precios);
+        if (totalCompra > umbralDescuento)
+        {
+            totalCompra = AplicarDescuento(totalCompra, porcentajeDescuento);
+            Console.WriteLine($"Descuento aplicado. Total con descuento: {totalCompra:C}");
+        }
+        else
+        {
+            Console.WriteLine($"Total de la compra: {totalCompra:C}");
+        }
+    }
