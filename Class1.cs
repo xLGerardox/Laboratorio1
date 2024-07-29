@@ -54,6 +54,22 @@ namespace Laboratorio1
             }
             return total;
         }
+        public void MostrarTotal()
+        {
+            float total = CalcularTotal();
+            float totalConDescuento = AplicarDescuento(total);
+            Console.WriteLine($"Total de la compra: {totalConDescuento:C}");
+        }
+
+        public void MostrarProductos()
+        {
+            Console.WriteLine("Productos en el carrito:");
+            foreach (var producto in productos)
+            {
+                Console.WriteLine($"- {producto.Nombre}: {producto.Precio:C}");
+            }
+        }
+    }
 
 
 
