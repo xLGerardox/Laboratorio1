@@ -1,56 +1,32 @@
-﻿using Laboratorio1;
-using static Laboratorio1.Class1;
+﻿using System;
+using System.Collections.Generic;
 
-Class1 producto = Class1.Producto;
-
+class Program
 {
-    while (true)
+    static void Main()
     {
-        MostrarMenu();
-        int opcion;
-        if (!int.TryParse(Console.ReadLine(), out opcion))
+        List<float> precios = new List<float>();
+        float umbralDescuento = 100.0f; 
+        float porcentajeDescuento = 0.10f; 
+
+        while (true)
         {
-            Console.WriteLine("No se acepta.");
-            continue;
+            string nombreProducto;
+            float precioProducto;
+
+            Console.Write("Ingrese el nombre del producto (o 'salir' para finalizar): ");
+            nombreProducto = Console.ReadLine();
+            if (nombreProducto.ToLower() == "salir")
+                break;
+
+            Console.Write("Ingrese el precio del producto: ");
+            if (float.TryParse(Console.ReadLine(), out precioProducto) && precioProducto >= 0)
+            {
+                precios.Add(precioProducto);
+            }
+            else
+            {
+                Console.WriteLine("No es valido, intente de nuevo.");
+            }
         }
-
-        switch (opcion)
-        {
-            case 1:
-                
-                break;
-            case 2:
-                break;
-            case 3:
-                break;
-            case 7:
-                Console.WriteLine("Saliendo...");
-                return;
-            default:
-                Console.WriteLine("No se acepta.");
-                break;
-        }
-
-        Console.WriteLine("\nPresiona Enter para continuar...");
-        Console.ReadLine();
-    }
-}
-
-static void MostrarMenu()
-{
-    Console.Clear();
-    Console.WriteLine("Menú de Funciones:");
-    Console.WriteLine("1. Solicitar nombre de producto");
-    Console.WriteLine("2. Ver productos");
-    Console.WriteLine("3. Salir");
-    Console.Write("Selecciona una opción: ");
-}
-
-
-static void NombreProducto()
-{
-    Console.WriteLine("Ingrese el nombre del producto");
-    Console.WriteLine("Ingrese el precio del producto");
-}
-
 

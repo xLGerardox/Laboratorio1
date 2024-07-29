@@ -6,18 +6,21 @@ using System.Threading.Tasks;
 
 namespace Laboratorio1
 {
-    internal class Class1
+    class Producto
     {
-        public class Class1
-        {
-            public string Nombre { get; set; }
-            public int Precio { get; set; }
+        public string Nombre { get; set; }
+        public float Precio { get; set; }
 
-            public Class1(int precio, string nombre)
-            {
-                Nombre = nombre;
-                Precio = precio;
-            }
+        public Producto(string nombre, float precio)
+        {
+            Nombre = nombre;
+            Precio = precio;
         }
+    }
+
+    class CarritoDeCompras
+    {
+        private List<Producto> productos;
+        private
     }
 }
