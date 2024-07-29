@@ -52,4 +52,8 @@ class Program
         return total;
     }
 
+    static float AplicarDescuento(float total, float porcentaje)
+    {
+        return total * (1 - porcentaje);
+    }
 }
