@@ -21,7 +21,7 @@ namespace Laboratorio1
     class CarritoDeCompras
     {
         private List<Producto> productos;
-        privatefloat umbralDescuento;
+        private float umbralDescuento;
         private float porcentajeDescuento;
 
         public CarritoDeCompras(float umbral, float porcentaje)
@@ -30,5 +30,14 @@ namespace Laboratorio1
             umbralDescuento = umbral;
             porcentajeDescuento = porcentaje;
         }
-    }
-}
+
+        public void AgregarProducto(string nombre, float precio)
+        {
+            productos.Add(new Producto(nombre, precio));
+        }
+
+        
+
+
+
+

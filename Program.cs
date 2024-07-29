@@ -30,7 +30,6 @@ class Program
             }
         }
 
-
         float totalCompra = CalcularTotal(precios);
         if (totalCompra > umbralDescuento)
         {
@@ -42,6 +41,7 @@ class Program
             Console.WriteLine($"Total de la compra: {totalCompra:C}");
         }
     }
+
     static float CalcularTotal(List<float> precios)
     {
         float total = 0;
@@ -52,8 +52,4 @@ class Program
         return total;
     }
 
-    static float AplicarDescuento(float total, float porcentaje)
-    {
-        return total * (1 - porcentaje);
-    }
 }
